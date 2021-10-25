@@ -1,0 +1,18 @@
+server:
+  port: ${SERVICE_PORT}
+  servlet:
+    context-path: /${SERVICE_NAME:FinalProject} 
+
+spring:
+  application:
+    name: ${SERVICE_NAME:FinalProject}
+  cloud:
+    config:
+      enabled: false
+  config:
+    use-legacy-processing: true
+  profiles:
+    include: shared
+
+mdp.discovery:
+  discoveryClientName: ${DISCOVERY_CLIENT_NAME:eureka}
